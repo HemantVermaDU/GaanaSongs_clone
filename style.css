@@ -1,0 +1,221 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+.container{
+    max-width:1280px;
+    margin: 0 auto;
+}
+.humburger-menu{
+    color: #fff;
+}
+.logo{
+   color: #fff;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+    padding: 10px 20px;
+}
+.header.h-inner{
+    height:60px;
+    background-color: #f5f5f5;
+}
+.btn-search{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    color: inherit;
+    font-family: inherit;
+}
+.search-bar{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.right{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.btn{
+    border-radius: 20px;
+    padding: 7px 18px;
+    border: 1px solid red;
+    text-decoration: none;
+    font-size: 0.7rem;
+    color: red;
+}
+.btn-log{
+    text-decoration: none;
+    color: black;
+}
+.bagde{
+    position: absolute;
+    bottom: 20px;
+    left: 57px;
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 7px;
+    font-size: 9px;
+    font-weight: 500;
+}
+
+/* Nav Start */
+.nav{
+    display: flex;
+}
+.nav>li{
+    padding: 20px 13px;
+    color: #B2b2b2;
+    cursor: pointer;
+    text-transform: uppercase;
+    list-style: none;
+}
+
+/* song ui start */
+.two-col-layout{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin-bottom: 80px;
+  
+}
+.music-libs{
+    flex: 8;
+    max-width:80%; 
+    overflow: hidden;
+}
+.ad-cont{
+    flex: 1;
+    max-width:20%;
+    background-color: #1E1E1E;
+}
+.song-sections{
+    margin: 50px 0;
+}
+.section-heading{
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: hsla(0.0%,100%,.9);
+    text-transform: capitalize;
+}
+.song-cont{
+      display: flex;
+      flex-direction: row;
+      /* overflow-x: scroll; */
+}
+.song-card{
+    display: flex;
+    flex-direction: column;
+    margin-right: 45px; 
+    position: relative;
+}
+ 
+.card-image img{
+    width: 160px;
+    height: 160px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+    .song-card:hover .overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-align: center;
+        z-index: 1;
+        background-color: rgba(0,0,0,.3);
+        cursor: pointer;
+        background-image: url(https://a10.gaanacdn.com/gn_img/images/play_1621599900.png);
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: calc(50% + 1px) 50%;
+    }
+
+.song-name{
+    color: hsla(0.0%,100%,.9);
+}
+/* Playing bar */
+ .playing_cont{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 100vw;
+    padding: 10px 15px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.5);
+    background-color:#fff;
+ }
+ .left-cont{
+    display: flex;
+    align-items: center;
+ }
+ .left-cont img{
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    margin-right: 10px;
+ }
+ .svg_color{
+    background-color: red;
+ }
+ /* middle */
+ .middle-cont{
+    display: flex;
+    align-items: center;
+ }
+ .play{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #e72c30;
+}
+.middle-cont button{
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+.play .svg_color{
+    fill: #fff!important;
+}
+ 
+/* right */
+ .right-cont{
+    display: flex;
+    align-items: center;
+ }
+/* Playing bar end */
+ 
+
+@media (max-width:700px){
+    .search-bar,.nav,.ad-cont{
+        display: none;
+    }
+     
+}
