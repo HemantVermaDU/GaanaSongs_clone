@@ -113,7 +113,7 @@ function buildSongCardDom(songObj){
               playingBtn.style.display = audioPlayer.paused ? 'none' : 'block';
         }
    
-      
+    // Audio Player
        audioPlayer.addEventListener('play' ,function(){
         if(!audioPlayer || audioPlayer.paused) return;
        
@@ -132,5 +132,14 @@ function buildSongCardDom(songObj){
     function getTimeString(time){
         return isNaN(audioPlayer.duration)?"0:00":Math.floor(time/60)+":"+parseInt((((time/60)%1)*60).toPrecision(2));
    }
+ 
+
+    //    Volume
+    var range = document.querySelector(".range");
+    range.addEventListener("change", function (e) {
+       audioPlayer.volume = e.target.value;
+    });
 
     
+   
+

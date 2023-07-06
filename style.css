@@ -248,7 +248,7 @@
     position: relative;
   
 }
-/* .right-cont .Volume .Volume__toggle.mute:after{
+.right-cont .Volume .Volume__toggle.mute:after{
     content: "/";
     position: absolute;
     width: 100%;
@@ -259,7 +259,7 @@
     font-size: 22px;
     color: #e72c30;
     transform: rotate(125deg);
-} */
+}
 .right-cont .Volume:hover .vol_wrap {
     display: flex;
 }
@@ -312,3 +312,5 @@
     }
      
 }
+
+
